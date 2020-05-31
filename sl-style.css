@@ -1,0 +1,232 @@
+.slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    height: 33rem;
+    margin-top: 2rem;
+
+
+}
+
+.slider:hover > .slider-content > .sl-item::before {
+    transition: opacity 1s;
+    opacity: 1;
+}
+
+.slider-content {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: visible;
+
+}
+
+.slider-content::after {
+    background: linear-gradient(90deg,
+            rgba(20, 20, 20, 0.8) 0%,
+            rgba(20, 20, 20, 0.5) 25%,
+            rgba(20, 20, 20, 0) 40%,
+            rgba(20, 20, 20, 0) 60%,
+            rgba(20, 20, 20, 0.5) 75%,
+            rgba(20, 20, 20, 0.8) 100%);
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+.sl-item {
+    display: inline-block;
+    height: calc(100% - 8rem);
+    width: 42.84%;
+    position: absolute;
+    overflow: hidden;
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.sl-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background-image: url("imgs/film.png"), url("imgs/film.png");
+    background-repeat: no-repeat;
+    background-size: 100% 4rem;
+    background-position: top center, bottom center;
+    transition: opacity 1s;
+    opacity: 0;
+
+}
+
+.sl-hidden {
+    display: none;
+}
+
+.sl-img {
+    height: 100%;
+}
+
+.sl-center {
+    left: 28.56%;
+}
+
+.sl-left {
+    left: -14.28%;
+}
+
+.sl-right {
+    left: 71.4%;
+}
+
+.sl-back {
+    left: -57.12%;
+}
+
+.sl-forward {
+    left: 114.24%;
+}
+
+.sl-center > .sl-img {
+    outline: 0.15rem solid rgba(89, 89, 89, 1);
+}
+
+.sl-left > .sl-img,
+.sl-right > .sl-img,
+.sl-back > .sl-img,
+.sl-forward > .sl-img {
+    opacity: 0.35;
+    outline: 0 solid rgba(89, 89, 89, 1);
+}
+
+.sl-btn-back {
+    left: 0;
+}
+
+.sl-btn-forward {
+    right: 0;
+}
+
+.sl-btn-back,
+.sl-btn-forward {
+    position: absolute;
+    width: 28.56%;
+    height: 100%;
+    top: 0;
+    cursor: pointer;
+}
+
+.sl-to-center {
+    animation-name: sl-to-center;
+}
+
+.sl-to-center > .sl-img {
+    animation-name: sl-showing;
+}
+
+.sl-to-left {
+    animation-name: sl-to-left;
+}
+
+.sl-to-right {
+    animation-name: sl-to-right;
+}
+
+.sl-to-left > .sl-img,
+.sl-to-right > .sl-img {
+    animation-name: sl-hiding;
+}
+
+.sl-to-back {
+    animation-name: sl-to-back;
+}
+
+.sl-to-forward {
+    animation-name: sl-to-forward;
+}
+
+.sl-to-center,
+.sl-to-center > .sl-img,
+.sl-to-left > .sl-img,
+.sl-to-right > .sl-img,
+.sl-to-left,
+.sl-to-right,
+.sl-to-back,
+.sl-to-forward {
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
+}
+
+@keyframes sl-hiding {
+    0% {
+        outline: 0.15rem solid rgba(89, 89, 89, 1);
+    }
+
+    30% {
+        outline: 0.15rem solid rgba(89, 89, 89, 0);
+    }
+
+    100% {
+        outline: 0.15rem solid rgba(89, 89, 89, 0);
+        opacity: 0.35;
+    }
+}
+
+@keyframes sl-showing {
+    0% {
+        outline: 0.15rem solid rgba(89, 89, 89, 0);
+    }
+
+    100% {
+        outline: 0.15rem solid rgba(89, 89, 89, 1);
+        opacity: 1;
+    }
+}
+
+@keyframes sl-to-center {
+    from {}
+
+    to {
+        left: 28.56%;
+    }
+}
+
+@keyframes sl-to-left {
+    from {}
+
+    to {
+        left: -14.28%;
+    }
+}
+
+@keyframes sl-to-right {
+    from {}
+
+    to {
+        left: 71.4%;
+    }
+}
+
+@keyframes sl-to-back {
+    from {}
+
+    to {
+        left: -57.12%;
+    }
+}
+
+@keyframes sl-to-forward {
+    from {}
+
+    to {
+        left: 114.24%;
+    }
+}

@@ -1,0 +1,160 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.button {
+    color: white;
+    width: 1.3rem;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 3rem;
+    margin-left: 0.8rem;
+    margin-top: 1.3rem;
+    position: relative;
+    display: inline-block;
+}
+
+.homeb {
+
+    background-image: url(./imgs/home.svg);
+}
+
+.aboutb {
+    background-image: url(./imgs/about.svg);
+
+}
+
+.photob {
+    background-image: url(./imgs/photo.svg);
+
+}
+
+
+.menu {
+
+    background-color: #4e4e4e;
+    height: 100vh;
+    width: 3rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 4;
+}
+
+
+.conteiner {
+    position: relative;
+    margin-left: 3rem;
+}
+
+.infobox {
+    min-width: 100%; 
+    min-height: 100vh;
+    background-color: #f1f1f1;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.dark {
+    background-color: #141414;
+
+}
+
+
+.bgtitle {
+    color: white;
+    font-size: 14rem;
+    font-family: 'Jost', sans-serif;
+    line-height: 0.9;
+
+
+}
+
+.bot {
+    bottom: 0;
+    position: absolute;
+}
+
+.vertical {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    margin-left: 1rem;
+
+}
+
+.horizontal {
+    margin-left: 13rem;
+
+}
+
+.homephoto {
+    height: 21rem;
+    position: absolute;
+    right: 0;
+    top: 7rem;
+}
+
+.darktext {
+    color: #141414;
+    font-size: 10rem;
+    position: absolute;
+    top: 8rem;
+    left: 44rem;
+}
+
+.titleh {
+    line-height: 16rem;
+    margin-left: 1rem;
+    top: 3rem;
+    position: absolute;
+}
+
+.square {
+    position: absolute;
+    height: 20rem;
+    width: 20rem;
+    top: 11rem;
+    left: 9rem;
+    border: black solid 1.8rem
+}
+
+.sqphoto {
+    height: 25rem;
+    width: 25rem;
+    position: absolute;
+    top: 15rem;
+    left: 15rem;
+}
+
+.abouttext {
+    color: black;
+    font-size: 1.6rem;
+    font-family: 'Jost', sans-serif;
+    position: absolute;
+    left: 45rem;
+    top: 18rem;
+    width: 45rem;
+}
+
+.title {
+    color: white;
+    font-size: 7rem;
+    font-family: 'Jost', sans-serif;
+    text-align: center;
+    padding-top: 3rem;
+    line-height: 7rem;
+}
+
+.desc {
+    color: white;
+    font-size: 1.8rem;
+    font-family: 'Jost', sans-serif;
+    text-align: center;
+    width: 40rem;
+    margin-left: calc(50% - 20rem);
+    line-height: 2.5rem;
+
+}
